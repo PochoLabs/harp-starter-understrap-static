@@ -1,6 +1,5 @@
-doctype
-html
-  head
-    link(rel="stylesheet" href="/main.css")
-  body
-    != yield
+include _partials/header.jade
+
+!= yield
+
+include _partials/footer.jade
