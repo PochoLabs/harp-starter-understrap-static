@@ -29,7 +29,7 @@ gulp.task('sass', function () {
 });
 
 // Run:
-// gulp cssnano
+// gulp nanocss
 // Minifies CSS files
 gulp.task('cssnano', ['cleancss'], function(){
   return gulp.src('./css/*.css')
@@ -96,21 +96,18 @@ gulp.task('scripts', function() {
 // gulp copy-assets.
 // Copy all needed dependency assets files from bower_component assets to themes /js, /scss and /fonts folder. Run this task after bower install or bower update
 
-
+// Copy all Bootstrap JS files
 gulp.task('copy-assets', function() {
+    gulp.src(basePaths.bower + 'bootstrap-sass/assets/javascripts/**/*.js')
+       .pipe(gulp.dest(basePaths.dev + '/js'));
 
-	// Copy all Foundation JS files
-	gulp.src(basePaths.bower + 'foundation-sites/js/*.js')
-      .pipe(gulp.dest(basePaths.dev + '/js'));
+// Copy all Bootstrap SCSS files
+    gulp.src(basePaths.bower + 'bootstrap-sass/assets/stylesheets/**/*.scss')
+       .pipe(gulp.dest(basePaths.dev + '/sass/bootstrap-sass'));
 
-	// Copy What input
-	gulp.src(basePaths.bower + 'what-input/*.js')
-      .pipe(gulp.dest(basePaths.dev + '/js'));
-
- // Copy all Foundation SCSS files
-     gulp.src(basePaths.bower + 'foundation-sites/scss/**/*.scss')
-        .pipe(gulp.dest(basePaths.dev + '/sass/foundation'));
-
+// Copy all Bootstrap Fonts
+    gulp.src(basePaths.bower + 'bootstrap-sass/assets/fonts/bootstrap/*.{ttf,woff,woff2,eof,svg}')
+        .pipe(gulp.dest('./fonts'));
 
 // Copy all Font Awesome Fonts
     gulp.src(basePaths.bower + 'fontawesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')

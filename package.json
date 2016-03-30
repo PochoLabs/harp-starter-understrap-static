@@ -1,14 +1,14 @@
 {
-  "name": "harp-starter-understrap-static",
+  "name": "wireframe-fonhare",
   "version": "0.0.1",
-  "description": "My take on starting a wireframe/static mockup for an Understrap based WordPress theme using Harp.js.",
+  "description": "Harp Wireframe Framework",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/PochoLabs/harp-starter-understrap-static.git"
+    "url": "https://github.com/PochoLabs/wireframe-fonhare.git"
   },
   "keywords": [
     "harp",
@@ -20,9 +20,9 @@
   "author": "Celso Mireles",
   "license": "",
   "bugs": {
-    "url": "https://github.com/PochoLabs/harp-starter-understrap-static/issues"
+    "url": "https://github.com/PochoLabs/wireframe-fonhare.git"
   },
-  "homepage": "https://github.com/PochoLabs/harp-starter-understrap-static",
+  "homepage": "https://github.com/PochoLabs/wireframe-fonhare.git",
   "dependencies": {
     "bower": "^1.7.7",
     "gulp": "^3.9.0",
